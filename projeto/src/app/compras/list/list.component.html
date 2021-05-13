@@ -1,0 +1,23 @@
+<table class="table table-hover table-striped">
+    <thead>
+        <th>Produto</th>
+        <th>Valor</th>
+        <th>Peso</th>
+        <th>Medida</th>
+        <th></th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor= "let compras of compras | async">
+            <td>{{compras.produto}}</td>
+            <td>{{compras.valor}}</td>
+            <td>{{compras.peso}}</td>
+            <td>{{compras.medida}}</td>
+            <td>
+                <button class="btn btn-info" (click)="edit(compras, compras.key)">Editar</button>
+                <button class="btn btn-danger ml-2" (click)="delete(compras.key)">Excluir</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+<h3>Cadastro de Compras</h3>
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Produto</label>
+        <input type="text" name="produto" [(ngModel)]="compras.produto" class="form-control"
+        placeholder="Nome do Produto">
+    </div>
+
+    <div class="form-group">
+        <label>Valor</label>
+        <input type="text" name="valor" [(ngModel)]="compras.valor" class="form-control"
+        placeholder="Valor do Produto">
+    </div>
+
+    <div class="form-group">
+        <label>Peso</label>
+        <input type="text" name="peso" [(ngModel)]="compras.peso" class="form-control"
+        placeholder="Peso do Produto">
+    </div>
+
+    <div class="form-group">
+        <label>Medida</label>
+        <input type="text" name="medida" [(ngModel)]="compras.medida" class="form-control"
+        placeholder="Tipo de Medidad do Produto?">
+    </div>
+
+    <button class="btn btn-primaty">Gravar</button>
+
+</form>
+
+
